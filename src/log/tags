@@ -1,0 +1,143 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DEBUG	LogLevel.h	/^        DEBUG = 1,$/;"	e	enum:youren::LogLevel::Level
+DateTimeFormatItem	DateTimeFormatItem.h	/^    DateTimeFormatItem(const std::string& format = "%Y-%m-%d %H:%M:%S")$/;"	f	class:DateTimeFormatItem
+DateTimeFormatItem	DateTimeFormatItem.h	/^class DateTimeFormatItem : public LogFormatter::FormatItem$/;"	c
+ERROR	LogLevel.h	/^        ERROR = 4,$/;"	e	enum:youren::LogLevel::Level
+FATAL	LogLevel.h	/^        FATAL = 5$/;"	e	enum:youren::LogLevel::Level
+FileAppender	FileAppender.cpp	/^FileAppender::FileAppender(const std::string& filename)$/;"	f	class:youren::FileAppender
+FileAppender	FileAppender.h	/^class FileAppender : public LogAppender $/;"	c	namespace:youren
+FileFormatItem	FileFormatItem.h	/^    FileFormatItem(const std::string& str = "") {}$/;"	f	class:FileFormatItem
+FileFormatItem	FileFormatItem.h	/^class FileFormatItem : public LogFormatter::FormatItem$/;"	c
+FormatItem	LogFormatter.h	/^    class FormatItem{$/;"	c	class:youren::LogFormatter
+GetThreadId	util.cpp	/^pid_t GetThreadId()$/;"	f	namespace:youren
+GetThreadName	util.cpp	/^std::string GetThreadName()$/;"	f	namespace:youren
+INFO	LogLevel.h	/^        INFO  = 2,$/;"	e	enum:youren::LogLevel::Level
+Level	LogLevel.h	/^    enum Level {$/;"	g	class:youren::LogLevel
+LevelFormatItem	LevelFormatItem.h	/^    LevelFormatItem(const std::string& str = "") {}$/;"	f	class:LevelFormatItem
+LevelFormatItem	LevelFormatItem.h	/^class LevelFormatItem : public LogFormatter::FormatItem$/;"	c
+LineFormatItem	LineFormatItem.h	/^    LineFormatItem(const std::string& str="") {}$/;"	f	class:LineFormatItem
+LineFormatItem	LineFormatItem.h	/^class LineFormatItem : public  LogFormatter::FormatItem$/;"	c
+LogAppender	LogAppender.h	/^    LogAppender() {  }$/;"	f	class:youren::LogAppender
+LogAppender	LogAppender.h	/^class LogAppender$/;"	c	namespace:youren
+LogEvent	LogEvent.h	/^    LogEvent(LogLevel::Level level, uint32_t threadid,const std::string& thread_name,$/;"	f	class:youren::LogEvent
+LogEvent	LogEvent.h	/^class LogEvent$/;"	c	namespace:youren
+LogFormatter	LogFormatter.cpp	/^LogFormatter::LogFormatter(const std::string& pattern)$/;"	f	class:youren::LogFormatter
+LogFormatter	LogFormatter.h	/^    LogFormatter(){}$/;"	f	class:youren::LogFormatter
+LogFormatter	LogFormatter.h	/^class LogFormatter$/;"	c	namespace:youren
+LogLevel	LogLevel.h	/^class LogLevel{$/;"	c	namespace:youren
+Logger	Logger.cpp	/^Logger::Logger(const std::string& name)$/;"	f	class:youren::Logger
+Logger	Logger.h	/^class Logger$/;"	c	namespace:youren
+MessageFormatItem	MessageFormatItem.h	/^    MessageFormatItem(const std::string& str = ""){  }$/;"	f	class:MessageFormatItem
+MessageFormatItem	MessageFormatItem.h	/^class MessageFormatItem : public LogFormatter::FormatItem$/;"	c
+StdoutAppender	StdoutAppender.h	/^class StdoutAppender : public LogAppender{$/;"	c	namespace:youren
+StringFormatItem	StringFormatItem.h	/^    StringFormatItem(const std::string& str)$/;"	f	class:StringFormatItem
+StringFormatItem	StringFormatItem.h	/^class StringFormatItem : public LogFormatter::FormatItem$/;"	c
+TabFormatItem	TabFormatItem.h	/^    TabFormatItem(const std::string& str="")$/;"	f	class:TabFormatItem
+TabFormatItem	TabFormatItem.h	/^class TabFormatItem : public LogFormatter::FormatItem$/;"	c
+ThreadFormatItem	ThreadFormatItem.h	/^    ThreadFormatItem(const std::string& str="") {}$/;"	f	class:ThreadFormatItem
+ThreadFormatItem	ThreadFormatItem.h	/^class ThreadFormatItem : public LogFormatter::FormatItem$/;"	c
+ThreadNameFormatItem	ThreadNameFormatItem.h	/^    ThreadNameFormatItem(const std::string& str="") {}$/;"	f	class:ThreadNameFormatItem
+ThreadNameFormatItem	ThreadNameFormatItem.h	/^class ThreadNameFormatItem : public LogFormatter::FormatItem$/;"	c
+UNKNOW	LogLevel.h	/^        UNKNOW = 0,$/;"	e	enum:youren::LogLevel::Level
+WARN	LogLevel.h	/^        WARN  = 3,$/;"	e	enum:youren::LogLevel::Level
+XX	LogFormatter.cpp	119;"	d	file:
+XX	LogFormatter.cpp	130;"	d	file:
+YOUREN_LOG_DEBUG	LogEvent.h	19;"	d
+YOUREN_LOG_ERROR	LogEvent.h	22;"	d
+YOUREN_LOG_FATAL	LogEvent.h	23;"	d
+YOUREN_LOG_INFO	LogEvent.h	20;"	d
+YOUREN_LOG_LEVEL	LogEvent.h	14;"	d
+YOUREN_LOG_WARN	LogEvent.h	21;"	d
+__YOUREN_LOGEVENT_H__	LogEvent.h	2;"	d
+__YOUREN_UTIL_H__	util.h	2;"	d
+addAppender	Logger.cpp	/^void Logger::addAppender(LogAppender::ptr appender)$/;"	f	class:youren::Logger
+debug	Logger.cpp	/^void Logger::debug(LogEvent::ptr event)$/;"	f	class:youren::Logger
+delAppender	Logger.cpp	/^void Logger::delAppender(LogAppender::ptr appender)$/;"	f	class:youren::Logger
+error	Logger.cpp	/^void Logger::error(LogEvent::ptr event)$/;"	f	class:youren::Logger
+fatal	Logger.cpp	/^void Logger::fatal(LogEvent::ptr event)$/;"	f	class:youren::Logger
+format	DateTimeFormatItem.h	/^    void format(std::ostream& os,LogLevel::Level level, LogEvent::ptr event) {$/;"	f	class:DateTimeFormatItem
+format	FileFormatItem.h	/^    void format(std::ostream& os,LogLevel::Level level, LogEvent::ptr event) {$/;"	f	class:FileFormatItem
+format	LevelFormatItem.h	/^    void format(std::ostream& os,LogLevel::Level level, LogEvent::ptr event) {$/;"	f	class:LevelFormatItem
+format	LineFormatItem.h	/^    void format(std::ostream& os,LogLevel::Level level, LogEvent::ptr event) {$/;"	f	class:LineFormatItem
+format	LogFormatter.cpp	/^std::ostream& LogFormatter::format(std::ostream& os,LogLevel::Level level,LogEvent::ptr event)$/;"	f	class:youren::LogFormatter
+format	LogFormatter.cpp	/^std::string LogFormatter::format(LogLevel::Level level, LogEvent::ptr event)$/;"	f	class:youren::LogFormatter
+format	MessageFormatItem.h	/^    void format(std::ostream& os,LogLevel::Level level, LogEvent::ptr event) {$/;"	f	class:MessageFormatItem
+format	StringFormatItem.h	/^    void format(std::ostream& os,LogLevel::Level level, LogEvent::ptr event) {$/;"	f	class:StringFormatItem
+format	TabFormatItem.h	/^    void format(std::ostream& os,LogLevel::Level level, LogEvent::ptr event) {$/;"	f	class:TabFormatItem
+format	ThreadFormatItem.h	/^    void format(std::ostream& os,LogLevel::Level level, LogEvent::ptr event) {$/;"	f	class:ThreadFormatItem
+format	ThreadNameFormatItem.h	/^    void format(std::ostream& os, LogLevel::Level level,LogEvent::ptr event){$/;"	f	class:ThreadNameFormatItem
+getContent	LogEvent.h	/^    std::string getContent() const { return m_ss.str(); }$/;"	f	class:youren::LogEvent
+getFileName	LogEvent.h	/^    char* getFileName() const { return m_filename; }$/;"	f	class:youren::LogEvent
+getFormatter	LogAppender.h	/^    LogFormatter::ptr getFormatter(){ return m_formatter; }$/;"	f	class:youren::LogAppender
+getLevel	LogEvent.cpp	/^std::string LogEvent::getLevel(LogLevel::Level level)$/;"	f	class:LogEvent
+getLevel	LogEvent.h	/^    LogLevel::Level getLevel() const { return m_level; }$/;"	f	class:youren::LogEvent
+getLine	LogEvent.h	/^    uint32_t getLine() const { return m_line; }$/;"	f	class:youren::LogEvent
+getLogLevel	Logger.h	/^    LogLevel::Level getLogLevel() const { return m_level; }$/;"	f	class:youren::Logger
+getSS	LogEvent.h	/^    std::stringstream& getSS() { return m_ss; }$/;"	f	class:youren::LogEvent
+getThreadId	LogEvent.h	/^    uint32_t getThreadId() const { return m_threadId; }$/;"	f	class:youren::LogEvent
+getThreadName	LogEvent.h	/^    std::string getThreadName() const { return m_threadName; }$/;"	f	class:youren::LogEvent
+getTime	LogEvent.h	/^    uint64_t getTime() const { return m_time; }$/;"	f	class:youren::LogEvent
+info	Logger.cpp	/^void Logger::info(LogEvent::ptr event)$/;"	f	class:youren::Logger
+init	LogFormatter.cpp	/^void LogFormatter::init()$/;"	f	class:youren::LogFormatter
+log	FileAppender.cpp	/^void FileAppender::log(LogLevel::Level level, LogEvent::ptr event)$/;"	f	class:youren::FileAppender
+log	Logger.cpp	/^void Logger::log(LogLevel::Level level, LogEvent::ptr event)$/;"	f	class:youren::Logger
+log	StdoutAppender.cpp	/^void StdoutAppender::log(LogLevel::Level level, LogEvent::ptr event) $/;"	f	class:youren::StdoutAppender
+m_appenders	Logger.h	/^    std::list<LogAppender::ptr> m_appenders; \/\/Appender集合$/;"	m	class:youren::Logger
+m_error	LogFormatter.h	/^    bool m_error = false;$/;"	m	class:youren::LogFormatter
+m_filename	LogEvent.h	/^    char* m_filename = nullptr;$/;"	m	class:youren::LogEvent
+m_filestream	FileAppender.h	/^    std::ofstream m_filestream;$/;"	m	class:youren::FileAppender
+m_format	DateTimeFormatItem.h	/^    std::string m_format;$/;"	m	class:DateTimeFormatItem
+m_formatter	LogAppender.h	/^    LogFormatter::ptr m_formatter;$/;"	m	class:youren::LogAppender
+m_items	LogFormatter.h	/^    std::vector<FormatItem::ptr> m_items;$/;"	m	class:youren::LogFormatter
+m_level	LogAppender.h	/^    LogLevel::Level m_level=LogLevel::DEBUG;$/;"	m	class:youren::LogAppender
+m_level	LogEvent.h	/^    LogLevel::Level m_level;  $/;"	m	class:youren::LogEvent
+m_level	Logger.h	/^    LogLevel::Level m_level;            \/\/日志级别$/;"	m	class:youren::Logger
+m_line	LogEvent.h	/^    uint32_t m_line = 0;$/;"	m	class:youren::LogEvent
+m_name	FileAppender.h	/^    std::string m_name;$/;"	m	class:youren::FileAppender
+m_name	Logger.h	/^    std::string m_name;                 \/\/日志名称$/;"	m	class:youren::Logger
+m_pattern	LogFormatter.h	/^    std::string m_pattern = "%d[%p]%m%t";$/;"	m	class:youren::LogFormatter
+m_ss	LogEvent.h	/^    std::stringstream m_ss;$/;"	m	class:youren::LogEvent
+m_string	StringFormatItem.h	/^    std::string m_string;$/;"	m	class:StringFormatItem
+m_string	TabFormatItem.h	/^    std::string m_string;$/;"	m	class:TabFormatItem
+m_threadId	LogEvent.h	/^    uint32_t m_threadId = 0;$/;"	m	class:youren::LogEvent
+m_threadName	LogEvent.h	/^    std::string m_threadName = nullptr;$/;"	m	class:youren::LogEvent
+m_time	LogEvent.h	/^    uint64_t m_time = 0;          \/\/时间戳$/;"	m	class:youren::LogEvent
+main	log_test.cpp	/^int main()$/;"	f
+override	FileAppender.h	/^    void log(LogLevel::Level, LogEvent::ptr event) override;$/;"	m	class:youren::FileAppender
+override	StdoutAppender.h	/^    void log(LogLevel::Level, LogEvent::ptr event) override;$/;"	m	class:youren::StdoutAppender
+ptr	FileAppender.h	/^    typedef std::shared_ptr<FileAppender> ptr;$/;"	t	class:youren::FileAppender
+ptr	LogAppender.h	/^    typedef std::shared_ptr<LogAppender> ptr;$/;"	t	class:youren::LogAppender
+ptr	LogEvent.h	/^    typedef std::shared_ptr<LogEvent> ptr;$/;"	t	class:youren::LogEvent
+ptr	LogFormatter.h	/^        typedef std::shared_ptr<FormatItem> ptr;$/;"	t	class:youren::LogFormatter::FormatItem
+ptr	LogFormatter.h	/^    typedef std::shared_ptr<LogFormatter> ptr;$/;"	t	class:youren::LogFormatter
+ptr	StdoutAppender.h	/^    typedef std::shared_ptr<StdoutAppender> ptr;$/;"	t	class:youren::StdoutAppender
+reopen	FileAppender.cpp	/^bool FileAppender::reopen()$/;"	f	class:youren::FileAppender
+setFormatter	LogAppender.h	/^    void setFormatter(LogFormatter::ptr formatter){ m_formatter = formatter; }$/;"	f	class:youren::LogAppender
+setLogLevel	Logger.h	/^    void setLogLevel(LogLevel::Level val) { m_level = val; }$/;"	f	class:youren::Logger
+warn	Logger.cpp	/^void Logger::warn(LogEvent::ptr event)$/;"	f	class:youren::Logger
+youren	FileAppender.cpp	/^namespace youren {$/;"	n	file:
+youren	FileAppender.h	/^namespace youren{$/;"	n
+youren	LogAppender.cpp	/^namespace youren{$/;"	n	file:
+youren	LogAppender.h	/^namespace youren{$/;"	n
+youren	LogEvent.h	/^namespace youren{$/;"	n
+youren	LogFormatter.cpp	/^namespace youren{$/;"	n	file:
+youren	LogFormatter.h	/^namespace youren{$/;"	n
+youren	LogLevel.h	/^namespace youren{$/;"	n
+youren	Logger.cpp	/^namespace youren {$/;"	n	file:
+youren	Logger.h	/^namespace youren{$/;"	n
+youren	StdoutAppender.cpp	/^namespace youren{$/;"	n	file:
+youren	StdoutAppender.h	/^namespace youren{$/;"	n
+youren	util.cpp	/^namespace youren$/;"	n	file:
+youren	util.h	/^namespace youren$/;"	n
+~FormatItem	LogFormatter.h	/^        virtual ~FormatItem(){}$/;"	f	class:youren::LogFormatter::FormatItem
+~LineFormatItem	LineFormatItem.h	/^    ~LineFormatItem() {}$/;"	f	class:LineFormatItem
+~LogAppender	LogAppender.h	/^    virtual ~LogAppender() {}$/;"	f	class:youren::LogAppender
+~LogEvent	LogEvent.h	/^    ~LogEvent() {}$/;"	f	class:youren::LogEvent
+~LogFormatter	LogFormatter.h	/^    ~LogFormatter() {}$/;"	f	class:youren::LogFormatter
+~Logger	Logger.h	/^    ~Logger() {}$/;"	f	class:youren::Logger
+~ThreadNameFormatItem	ThreadNameFormatItem.h	/^    ~ThreadNameFormatItem() {}$/;"	f	class:ThreadNameFormatItem
