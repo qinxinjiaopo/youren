@@ -86,10 +86,211 @@ public:
             _ptr.incRef();
         }
     }
-    ~YR_AutoPtr() {}
 
+    //用其他智能指针的原始指针初始化，计数+1
+    template<class Y>
+    YR_AutoPtr(const YR_AutoPtr<Y>& r)
+    {
+        _ptr = t._ptr;
+        if(_ptr)
+        {
+            _ptr->incRef();
+        }
+    }
+
+    YR_AutoPtr(const YR_AutoPtr& r)
+    {
+        _ptr = t._ptr;
+        if(_ptr)
+        {
+            _ptr->incRef();
+        }
+    }
+
+    ~YR_AutoPtr() {
+        if(_ptr)
+        {
+            _ptr->decRef();
+        }
+    }
+
+    //赋值，普通指针
+    YR_AutoPtr& operator=(T* p)
+    {
+        if(_ptr != p)
+        {
+            if(p)
+            {
+                p->incRef();
+            }
+
+            T* ptr=_ptr;
+            _ptr = p;
+
+            //释放原来指针
+            if(ptr)
+            {
+                ptr->decRef();
+            }
+        }
+        return *this;
+    }
+
+    //赋值，其他类型智能指针
+    template<class Y>
+    YR_AutoPtr& operator=(const YR_AutoPtr<Y>& r)
+    {
+        if(_ptr != r._ptr){
+            if(r._ptr)
+            {
+                r._ptr->incRef();
+            }
+
+            T* ptr = _ptr;
+            _ptr = r._ptr;
+            if(ptr)
+            {
+                ptr->decRef();
+            }
+        }
+        return *this;
+    }
+
+    YR_AutoPtr& operator=(const YR_AutoPtr& r)
+    {
+        if(_ptr != r._ptr)
+        {
+            if(r._ptr)
+            {
+                r._ptr->incRef();
+            }
+            
+            T* ptr = _ptr;
+            _ptr = r._ptr;
+            if(ptr)
+            {
+                ptr->decRef();
+            }
+        }
+        return *this;
+    }
+
+    //将其他类型的指针转换为当前类型的指针
+    template<class Y>
+    static YR_AutoPtr dynamicCast(const YR_AutoPtr<Y> & r)
+    {
+        return YR_AutoPtr(dynamic_cast<T*>(r._ptr));
+    }
+
+    //将其他类型的原生指针转换为当前类型的智能指针
+    template<class Y>
+    static YR_AutoPtr dynamicCast(Y* p)
+    {
+        return YR_AutoPtr(dynamic_cast<T*>(p));
+    }
+
+    //获取原生指针
+    T* get() const
+    {
+        return _ptr;
+    }
+
+    //调用
+    T* operator->() const
+    {
+        if(!_ptr)
+        {
+            throwNullHandleException();
+        }
+        return _ptr;
+    }
+
+    T& operator*() const
+    {
+        if(!_ptr)
+        {
+            throwNullHandleException();
+        }
+        return *_ptr;
+    }
+
+    //是否有效
+    operator bool() const
+    {
+        return _ptr?true:false;
+    }
+
+    //交换指针
+    void swap(YR_AutoPtr& other)
+    {
+        std::swap(_ptr, other._ptr);
+    }
+
+protected:
+    //抛出异常
+    void throwNullHandleException() const;
+
+public:
+    T* _ptr;
 private:
 
 };
+
+template<class T> inline void 
+YR_AutoPtr<T>::throwNullHandleException() const
+{
+    throw YR_AutoPtrNull_Exception("autoptr null handle error");
+}
+
+// == 判断
+template<class T, class U> inline bool
+operator==(const YR_AutoPtr<T>& lhs, const YR_AutoPtr<U>& rhs)
+{
+    T* l = lhs.get();
+    U* r = rhs.get();
+
+    if(l && r)
+    {
+        return *l == *r;
+    }
+    else
+    {
+        return !l && !r;
+    }
+}
+
+//不等于判断
+template<class T, class U> inline bool
+operator!=(const YR_AutoPtr<T>& lhs, const YR_AutoPtr<U>& rhs)
+{
+    T* l = lhs.get();
+    U* r = rhs.get();
+
+    if(l && r)
+    {
+        return *l != *r;
+    }
+    else
+    {
+        return l || r;
+    }
+}
+
+//小于判断，用于map容器中
+template<class T, class U>inline bool
+operator<(const YR_AutoPtr<T>& lhs,const YR_AutoPtr<U>& rhs)
+{
+    T* l = lhs.get();
+    U* r = rhs.get();
+
+    if(l && r)
+    {
+        return *l < *r;
+    }
+    else
+    {
+        return !l && r;
+    }
+}
 /////////////////////////////////////////////////////////////////////////////////////////
 }
