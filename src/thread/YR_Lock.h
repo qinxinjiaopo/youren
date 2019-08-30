@@ -24,8 +24,9 @@ template <class T>
 class YR_LockT
 {
 public:
+    //构造时加锁
     YR_LockT(const T& mutex) : _mutex(mutex) { _mutex.lock(); _acquired = true;}
-    
+    //析构时解锁
     virtual ~YR_LockT() {
         if(_acquired)
         {
