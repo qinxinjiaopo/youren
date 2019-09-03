@@ -3,7 +3,7 @@
 #include <cerrno>
 #include <string>
 
-#include "../ex/YR_Exception.h"
+#include "YR_Exception.h"
 
 using namespace std;
 namespace youren {
@@ -135,7 +135,7 @@ private:
 
 //读写锁写锁模板
 template < class T>
-calss YR_RW_WLockT
+class YR_RW_WLockT
 {
 public:
     YR_RW_WLockT(T& lock)
@@ -153,7 +153,7 @@ private:
     mutable bool _acquired;
 
     YR_RW_WLockT(const YR_RW_WLockT&);
-    YR_RW_WLOckT& operator=(const YR_RW_WLockT&);
+    YR_RW_WLockT& operator=(const YR_RW_WLockT&);
 };
 ////////////////////////////////////////////////////////////////////////////////
 }

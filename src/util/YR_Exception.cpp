@@ -1,4 +1,4 @@
-#include "YR_Exeption.h"
+#include "YR_Exception.h"
 #include <cerrno>
 #include <execinfo.h>
 #include <cstring>

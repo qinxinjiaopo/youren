@@ -2,7 +2,7 @@
 #include <sys/types.h>
 #include <signal.h>
 #include <pthread.h>
-#include "../ex/YR_Exception.h"
+#include "YR_Exception.h"
 #include "YR_Monitor.h"
 
 namespace youren {

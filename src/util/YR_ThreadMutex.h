@@ -16,8 +16,8 @@ struct YR_ThreadMutex_Exception : public YR_Lock_Exception
 class YR_ThreadMutex
 {
 public:
-    YR_ThreadMutex() {}
-    virtual ~YR_ThreadMutex() {}
+    YR_ThreadMutex(); 
+    virtual ~YR_ThreadMutex();
 
     void lock() const;
 

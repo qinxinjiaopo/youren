@@ -2,7 +2,7 @@
 #include <string>
 #include <string.h>
 #include "YR_Atomic.h"
-#include "../ex/YR_Exception.h"
+#include "YR_Exception.h"
 
 namespace youren{
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -22,7 +22,7 @@ public:
     typedef T atomic_type;
     YR_HandleBaseT& operator=(const YR_HandleBaseT&) { return *this; }
 
-    void incRef() {_atomic.inc_fase();}
+    void incRef() {_atomic.inc_fast();}
     void decRef()
     {
         if(_atomic.dec_and_test() && !_bNoDelete)
@@ -83,13 +83,13 @@ public:
         _ptr = p;
         if(_ptr)
         {
-            _ptr.incRef();
+            _ptr->incRef();
         }
     }
 
     //用其他智能指针的原始指针初始化，计数+1
     template<class Y>
-    YR_AutoPtr(const YR_AutoPtr<Y>& r)
+    YR_AutoPtr(const YR_AutoPtr<Y>& t)
     {
         _ptr = t._ptr;
         if(_ptr)
@@ -98,7 +98,7 @@ public:
         }
     }
 
-    YR_AutoPtr(const YR_AutoPtr& r)
+    YR_AutoPtr(const YR_AutoPtr& t)
     {
         _ptr = t._ptr;
         if(_ptr)

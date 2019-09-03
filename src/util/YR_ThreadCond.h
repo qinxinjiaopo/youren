@@ -1,5 +1,5 @@
 #pragma once
-#include "../ex/YR_Exception.h"
+#include "YR_Exception.h"
 #include <sys/time.h>
 
 using namespace std;
@@ -17,8 +17,8 @@ struct YR_ThreadCond_Exception : public YR_Exception
 class YR_ThreadCond
 {
 public:
-    YR_ThreadCond() {}
-    ~YR_ThreadCond() {}
+    YR_ThreadCond();
+    ~YR_ThreadCond();
 
     //发送信号，等待在该条件的一个线程会醒
     void signal();
@@ -34,7 +34,7 @@ public:
     void wait(const Mutex& mutex) const
     {
         int c = mutex.count();
-        int rc = phread_cond_wait(&_cond, &mutex._mutex);
+        int rc = pthread_cond_wait(&_cond, &mutex._mutex);
         mutex.count(c);
         if(rc != 0)
         {
@@ -44,7 +44,7 @@ public:
 
     //等待时间，false表示超时，true表示事件来了
     template <typename Mutex>
-    bool timewait(const Mutex& mutex, int millsecond) const
+    bool timeWait(const Mutex& mutex, int millsecond) const
     {
         int c =mutex.count();
         timespec ts = abstime(millsecond);

@@ -23,11 +23,6 @@ struct YR_ThreadPool_Exception : public YR_Exception
 };
 
 //通用线程池类
-/* 使用方式说明:
- * 1 采用tc_functorwrapper封装一个调用
- * 2 用tc_threadpool对调用进行执行
- * 具体示例代码请参见:demo/test_tc_thread_pool.cpp
- */
 class YR_ThreadPool : public YR_ThreadLock
 {
 public:
@@ -97,10 +92,10 @@ public:
     static ThreadData* getThreadData(pthread_key_t pkey);
     
 protected:
-    //释放资源
+    //释放资源,用于pthread_create的第二个参数
     static void destructor(void *p);
 
-    //初始化key
+    //初始化key,方便key的创建和销毁
     class KeyInitialize
     {
     public:
@@ -127,7 +122,8 @@ protected:
     class ThreadWorker : public YR_Thread
     {
     public:
-        ThreadWorker(YR_ThreadPool *tpool);
+        ThreadWorker(YR_ThreadPool *tpool)
+            :_tpool(tpool),_bTerminate(false){}
 
         //通知线程结束
         void terminate();
