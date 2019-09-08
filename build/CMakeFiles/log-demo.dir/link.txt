@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -g -O2 -Wall -Wno-deprecated -pthread  -rdynamic CMakeFiles/log-demo.dir/YRLogger.cpp.o CMakeFiles/log-demo.dir/main.cpp.o  -o ../bin/log-demo util/libyourenutil.a 

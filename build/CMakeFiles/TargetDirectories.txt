@@ -1,3 +1,6 @@
 /home/youren/youren/build/CMakeFiles/rebuild_cache.dir
-/home/youren/youren/build/CMakeFiles/test.dir
+/home/youren/youren/build/CMakeFiles/log-demo.dir
 /home/youren/youren/build/CMakeFiles/edit_cache.dir
+/home/youren/youren/build/util/CMakeFiles/rebuild_cache.dir
+/home/youren/youren/build/util/CMakeFiles/yourenutil.dir
+/home/youren/youren/build/util/CMakeFiles/edit_cache.dir

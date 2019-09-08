@@ -65,39 +65,94 @@ CMAKE_SOURCE_DIR = /home/youren/youren
 CMAKE_BINARY_DIR = /home/youren/youren/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/test.dir
+# Target rules for target CMakeFiles/log-demo.dir
 
 # All Build rule for target.
-CMakeFiles/test.dir/all:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/youren/youren/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target test"
-.PHONY : CMakeFiles/test.dir/all
+CMakeFiles/log-demo.dir/all: util/CMakeFiles/yourenutil.dir/all
+	$(MAKE) -f CMakeFiles/log-demo.dir/build.make CMakeFiles/log-demo.dir/depend
+	$(MAKE) -f CMakeFiles/log-demo.dir/build.make CMakeFiles/log-demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/youren/youren/build/CMakeFiles --progress-num=1,2,3 "Built target log-demo"
+.PHONY : CMakeFiles/log-demo.dir/all
 
 # Include target in all.
-all: CMakeFiles/test.dir/all
+all: CMakeFiles/log-demo.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/youren/youren/build/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
+CMakeFiles/log-demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/youren/youren/build/CMakeFiles 13
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/log-demo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/youren/youren/build/CMakeFiles 0
-.PHONY : CMakeFiles/test.dir/rule
+.PHONY : CMakeFiles/log-demo.dir/rule
 
 # Convenience name for target.
-test: CMakeFiles/test.dir/rule
+log-demo: CMakeFiles/log-demo.dir/rule
 
-.PHONY : test
-
-# clean rule for target.
-CMakeFiles/test.dir/clean:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
-.PHONY : CMakeFiles/test.dir/clean
+.PHONY : log-demo
 
 # clean rule for target.
-clean: CMakeFiles/test.dir/clean
+CMakeFiles/log-demo.dir/clean:
+	$(MAKE) -f CMakeFiles/log-demo.dir/build.make CMakeFiles/log-demo.dir/clean
+.PHONY : CMakeFiles/log-demo.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/log-demo.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory util
+
+# Convenience name for "all" pass in the directory.
+util/all: util/CMakeFiles/yourenutil.dir/all
+
+.PHONY : util/all
+
+# Convenience name for "clean" pass in the directory.
+util/clean: util/CMakeFiles/yourenutil.dir/clean
+
+.PHONY : util/clean
+
+# Convenience name for "preinstall" pass in the directory.
+util/preinstall:
+
+.PHONY : util/preinstall
+
+#=============================================================================
+# Target rules for target util/CMakeFiles/yourenutil.dir
+
+# All Build rule for target.
+util/CMakeFiles/yourenutil.dir/all:
+	$(MAKE) -f util/CMakeFiles/yourenutil.dir/build.make util/CMakeFiles/yourenutil.dir/depend
+	$(MAKE) -f util/CMakeFiles/yourenutil.dir/build.make util/CMakeFiles/yourenutil.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/youren/youren/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13 "Built target yourenutil"
+.PHONY : util/CMakeFiles/yourenutil.dir/all
+
+# Include target in all.
+all: util/CMakeFiles/yourenutil.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+util/CMakeFiles/yourenutil.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/youren/youren/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 util/CMakeFiles/yourenutil.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/youren/youren/build/CMakeFiles 0
+.PHONY : util/CMakeFiles/yourenutil.dir/rule
+
+# Convenience name for target.
+yourenutil: util/CMakeFiles/yourenutil.dir/rule
+
+.PHONY : yourenutil
+
+# clean rule for target.
+util/CMakeFiles/yourenutil.dir/clean:
+	$(MAKE) -f util/CMakeFiles/yourenutil.dir/build.make util/CMakeFiles/yourenutil.dir/clean
+.PHONY : util/CMakeFiles/yourenutil.dir/clean
+
+# clean rule for target.
+clean: util/CMakeFiles/yourenutil.dir/clean
 
 .PHONY : clean
 

@@ -111,233 +111,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named log-demo
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+log-demo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 log-demo
+.PHONY : log-demo
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+log-demo/fast:
+	$(MAKE) -f CMakeFiles/log-demo.dir/build.make CMakeFiles/log-demo.dir/build
+.PHONY : log-demo/fast
 
-src/log/FileAppender.o: src/log/FileAppender.cpp.o
+#=============================================================================
+# Target rules for targets named yourenutil
 
-.PHONY : src/log/FileAppender.o
+# Build rule for target.
+yourenutil: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yourenutil
+.PHONY : yourenutil
 
-# target to build an object file
-src/log/FileAppender.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/FileAppender.cpp.o
-.PHONY : src/log/FileAppender.cpp.o
+# fast build rule for target.
+yourenutil/fast:
+	$(MAKE) -f util/CMakeFiles/yourenutil.dir/build.make util/CMakeFiles/yourenutil.dir/build
+.PHONY : yourenutil/fast
 
-src/log/FileAppender.i: src/log/FileAppender.cpp.i
+YRLogger.o: YRLogger.cpp.o
 
-.PHONY : src/log/FileAppender.i
-
-# target to preprocess a source file
-src/log/FileAppender.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/FileAppender.cpp.i
-.PHONY : src/log/FileAppender.cpp.i
-
-src/log/FileAppender.s: src/log/FileAppender.cpp.s
-
-.PHONY : src/log/FileAppender.s
-
-# target to generate assembly for a file
-src/log/FileAppender.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/FileAppender.cpp.s
-.PHONY : src/log/FileAppender.cpp.s
-
-src/log/LogAppender.o: src/log/LogAppender.cpp.o
-
-.PHONY : src/log/LogAppender.o
+.PHONY : YRLogger.o
 
 # target to build an object file
-src/log/LogAppender.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/LogAppender.cpp.o
-.PHONY : src/log/LogAppender.cpp.o
+YRLogger.cpp.o:
+	$(MAKE) -f CMakeFiles/log-demo.dir/build.make CMakeFiles/log-demo.dir/YRLogger.cpp.o
+.PHONY : YRLogger.cpp.o
 
-src/log/LogAppender.i: src/log/LogAppender.cpp.i
+YRLogger.i: YRLogger.cpp.i
 
-.PHONY : src/log/LogAppender.i
+.PHONY : YRLogger.i
 
 # target to preprocess a source file
-src/log/LogAppender.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/LogAppender.cpp.i
-.PHONY : src/log/LogAppender.cpp.i
+YRLogger.cpp.i:
+	$(MAKE) -f CMakeFiles/log-demo.dir/build.make CMakeFiles/log-demo.dir/YRLogger.cpp.i
+.PHONY : YRLogger.cpp.i
 
-src/log/LogAppender.s: src/log/LogAppender.cpp.s
+YRLogger.s: YRLogger.cpp.s
 
-.PHONY : src/log/LogAppender.s
+.PHONY : YRLogger.s
 
 # target to generate assembly for a file
-src/log/LogAppender.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/LogAppender.cpp.s
-.PHONY : src/log/LogAppender.cpp.s
+YRLogger.cpp.s:
+	$(MAKE) -f CMakeFiles/log-demo.dir/build.make CMakeFiles/log-demo.dir/YRLogger.cpp.s
+.PHONY : YRLogger.cpp.s
 
-src/log/LogEvent.o: src/log/LogEvent.cpp.o
+main.o: main.cpp.o
 
-.PHONY : src/log/LogEvent.o
+.PHONY : main.o
 
 # target to build an object file
-src/log/LogEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/LogEvent.cpp.o
-.PHONY : src/log/LogEvent.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/log-demo.dir/build.make CMakeFiles/log-demo.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-src/log/LogEvent.i: src/log/LogEvent.cpp.i
+main.i: main.cpp.i
 
-.PHONY : src/log/LogEvent.i
-
-# target to preprocess a source file
-src/log/LogEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/LogEvent.cpp.i
-.PHONY : src/log/LogEvent.cpp.i
-
-src/log/LogEvent.s: src/log/LogEvent.cpp.s
-
-.PHONY : src/log/LogEvent.s
-
-# target to generate assembly for a file
-src/log/LogEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/LogEvent.cpp.s
-.PHONY : src/log/LogEvent.cpp.s
-
-src/log/LogFormatter.o: src/log/LogFormatter.cpp.o
-
-.PHONY : src/log/LogFormatter.o
-
-# target to build an object file
-src/log/LogFormatter.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/LogFormatter.cpp.o
-.PHONY : src/log/LogFormatter.cpp.o
-
-src/log/LogFormatter.i: src/log/LogFormatter.cpp.i
-
-.PHONY : src/log/LogFormatter.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/log/LogFormatter.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/LogFormatter.cpp.i
-.PHONY : src/log/LogFormatter.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/log-demo.dir/build.make CMakeFiles/log-demo.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/log/LogFormatter.s: src/log/LogFormatter.cpp.s
+main.s: main.cpp.s
 
-.PHONY : src/log/LogFormatter.s
-
-# target to generate assembly for a file
-src/log/LogFormatter.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/LogFormatter.cpp.s
-.PHONY : src/log/LogFormatter.cpp.s
-
-src/log/Logger.o: src/log/Logger.cpp.o
-
-.PHONY : src/log/Logger.o
-
-# target to build an object file
-src/log/Logger.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/Logger.cpp.o
-.PHONY : src/log/Logger.cpp.o
-
-src/log/Logger.i: src/log/Logger.cpp.i
-
-.PHONY : src/log/Logger.i
-
-# target to preprocess a source file
-src/log/Logger.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/Logger.cpp.i
-.PHONY : src/log/Logger.cpp.i
-
-src/log/Logger.s: src/log/Logger.cpp.s
-
-.PHONY : src/log/Logger.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/log/Logger.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/Logger.cpp.s
-.PHONY : src/log/Logger.cpp.s
-
-src/log/StdoutAppender.o: src/log/StdoutAppender.cpp.o
-
-.PHONY : src/log/StdoutAppender.o
-
-# target to build an object file
-src/log/StdoutAppender.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/StdoutAppender.cpp.o
-.PHONY : src/log/StdoutAppender.cpp.o
-
-src/log/StdoutAppender.i: src/log/StdoutAppender.cpp.i
-
-.PHONY : src/log/StdoutAppender.i
-
-# target to preprocess a source file
-src/log/StdoutAppender.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/StdoutAppender.cpp.i
-.PHONY : src/log/StdoutAppender.cpp.i
-
-src/log/StdoutAppender.s: src/log/StdoutAppender.cpp.s
-
-.PHONY : src/log/StdoutAppender.s
-
-# target to generate assembly for a file
-src/log/StdoutAppender.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/StdoutAppender.cpp.s
-.PHONY : src/log/StdoutAppender.cpp.s
-
-src/log/log_test.o: src/log/log_test.cpp.o
-
-.PHONY : src/log/log_test.o
-
-# target to build an object file
-src/log/log_test.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/log_test.cpp.o
-.PHONY : src/log/log_test.cpp.o
-
-src/log/log_test.i: src/log/log_test.cpp.i
-
-.PHONY : src/log/log_test.i
-
-# target to preprocess a source file
-src/log/log_test.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/log_test.cpp.i
-.PHONY : src/log/log_test.cpp.i
-
-src/log/log_test.s: src/log/log_test.cpp.s
-
-.PHONY : src/log/log_test.s
-
-# target to generate assembly for a file
-src/log/log_test.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/log_test.cpp.s
-.PHONY : src/log/log_test.cpp.s
-
-src/log/util.o: src/log/util.cpp.o
-
-.PHONY : src/log/util.o
-
-# target to build an object file
-src/log/util.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/util.cpp.o
-.PHONY : src/log/util.cpp.o
-
-src/log/util.i: src/log/util.cpp.i
-
-.PHONY : src/log/util.i
-
-# target to preprocess a source file
-src/log/util.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/util.cpp.i
-.PHONY : src/log/util.cpp.i
-
-src/log/util.s: src/log/util.cpp.s
-
-.PHONY : src/log/util.s
-
-# target to generate assembly for a file
-src/log/util.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/log/util.cpp.s
-.PHONY : src/log/util.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/log-demo.dir/build.make CMakeFiles/log-demo.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -346,32 +197,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... test"
+	@echo "... log-demo"
 	@echo "... edit_cache"
-	@echo "... src/log/FileAppender.o"
-	@echo "... src/log/FileAppender.i"
-	@echo "... src/log/FileAppender.s"
-	@echo "... src/log/LogAppender.o"
-	@echo "... src/log/LogAppender.i"
-	@echo "... src/log/LogAppender.s"
-	@echo "... src/log/LogEvent.o"
-	@echo "... src/log/LogEvent.i"
-	@echo "... src/log/LogEvent.s"
-	@echo "... src/log/LogFormatter.o"
-	@echo "... src/log/LogFormatter.i"
-	@echo "... src/log/LogFormatter.s"
-	@echo "... src/log/Logger.o"
-	@echo "... src/log/Logger.i"
-	@echo "... src/log/Logger.s"
-	@echo "... src/log/StdoutAppender.o"
-	@echo "... src/log/StdoutAppender.i"
-	@echo "... src/log/StdoutAppender.s"
-	@echo "... src/log/log_test.o"
-	@echo "... src/log/log_test.i"
-	@echo "... src/log/log_test.s"
-	@echo "... src/log/util.o"
-	@echo "... src/log/util.i"
-	@echo "... src/log/util.s"
+	@echo "... yourenutil"
+	@echo "... YRLogger.o"
+	@echo "... YRLogger.i"
+	@echo "... YRLogger.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

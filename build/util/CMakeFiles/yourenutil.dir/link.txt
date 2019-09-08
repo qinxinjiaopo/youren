@@ -1,0 +1,2 @@
+/usr/bin/ar qc libyourenutil.a  CMakeFiles/yourenutil.dir/YR_Common.cpp.o CMakeFiles/yourenutil.dir/YR_Exception.cpp.o CMakeFiles/yourenutil.dir/YR_File.cpp.o CMakeFiles/yourenutil.dir/YR_Logger.cpp.o CMakeFiles/yourenutil.dir/YR_Thread.cpp.o CMakeFiles/yourenutil.dir/YR_ThreadCond.cpp.o CMakeFiles/yourenutil.dir/YR_ThreadMutex.cpp.o CMakeFiles/yourenutil.dir/YR_ThreadPool.cpp.o CMakeFiles/yourenutil.dir/YR_TimeProvider.cpp.o
+/usr/bin/ranlib libyourenutil.a
